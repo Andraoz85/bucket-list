@@ -1,0 +1,80 @@
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f0f0f0;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #bucketForm {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    #bucketForm input,
+    #bucketForm select {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    #bucketForm button {
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    .completed span {
+        text-decoration: line-through;
+        color: gray;
+    }
+
+    .completed-btn {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .not-completed-btn {
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .delete-btn {
+        background-color: gray;
+        color: rgb(235, 235, 235);
+        border: none;
+        border-radius: 3px;
+    }
+
+
+    /* Styling för meddelande när listan är tom */
+    #bucketLists p {
+        text-align: center;
+        color: gray;
+    }
