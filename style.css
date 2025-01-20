@@ -37,14 +37,18 @@
 
     li {
         display: flex;
-        justify-content: space-between;
+        justify-content:flex-end;
         align-items: center;
         padding: 10px;
         margin: 10px;
         background-color: #fff;
         margin-bottom: 5px;
         border-radius: 5px;
+        span {
+            flex-grow: 1;
+        }
     }
+    
 
     .completed span {
         text-decoration: line-through;
@@ -70,6 +74,7 @@
         color: rgb(235, 235, 235);
         border: none;
         border-radius: 3px;
+        margin-left: 10px;
     }
 
 

@@ -106,6 +106,7 @@ function addActivity(name, category) {
   activities.push(activity);
   console.log("Lägger till ny aktivitet:", activity);
   saveActivities(); // spara aktiviteten i local storage
+  sortActivities(); // sortera aktiviteterna
   refreshBucketList(); // uppdatera listan
 }
 
@@ -126,10 +127,26 @@ function toggleComplete(index) {
     activities[index].completed = !activities[index].completed; // byt status
     console.log(`växlar status för aktivitet #${index}: `, activities[index]);
     saveActivities();
+    sortActivities();
     refreshBucketList();
   } else {
     console.error("Ogiltigt index", index);
   }
+}
+
+function sortActivities() {
+  activities.sort((a, b) => {
+    // Sortera aktiviteter efter kategori
+    if (a.category < b.category) return -1;
+    if (a.category > b.category) return 1;
+
+    // Om kategorierna är samma, sortera efter namn
+    if (a.name < b.name.toLowerCase()) return -1;
+    if (a.name > b.name.toLowerCase()) return 1;
+
+    return 0; // behåll ordningen om både kategoru och namn är samma
+  });
+  console.log("Aktiviteter sorterade:", activities);
 }
 
 // Eventlistener för formuläret
