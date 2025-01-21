@@ -48,7 +48,6 @@
             flex-grow: 1;
         }
     }
-    
 
     .completed span {
         text-decoration: line-through;
@@ -77,8 +76,6 @@
         margin-left: 10px;
     }
 
-
-    /* Styling för meddelande när listan är tom */
     #bucketLists p {
         text-align: center;
         color: gray;
